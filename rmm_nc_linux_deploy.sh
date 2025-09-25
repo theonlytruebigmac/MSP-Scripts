@@ -3,8 +3,8 @@
 #title           : rmm_nc_linux_deploy.sh
 #description     : This script will download linux installer for the N-central agent and install it
 #author          : Zach.Frazier
-#date            : 2025-09-23
-#version         : 1.4.0
+#date            : 2025-09-26
+#version         : 1.6.0
 #usage           : sudo bash rmm_nc_linux_deploy.sh -s SERVERURL -u APIUSR -j JWT -c CUSTOMERID
 
 ## SoftwareIDs for URL
