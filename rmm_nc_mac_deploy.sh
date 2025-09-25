@@ -3,8 +3,8 @@
 #title           : rmm_nc_mac_deploy.sh
 #description     : This script simplifies 3rd Party RMM mac agent deployment by combining the required DMG and the silent install script for the N-central agent and installing them with the provided parameters.
 #author          : theonlytruebigmac
-#date            : 2023-08-10
-#version         : 1.0.1
+#date            : 2025-09-25
+#version         : 1.3
 #usage           : sudo ./rmm_nc_mac_deploy.sh -s SERVERURL -u APIUSR -j JWT -c CUSTOMERID [-d MACDMGVER -i MACSHVER]
 
 # Define the parameters
