@@ -3,8 +3,8 @@
 #title           : rmm_nc_linux_deploy.sh
 #description     : This script will download linux installer for the N-central agent and install it
 #author          : Zach.Frazier
-#date            : 2025-09-26
-#version         : 1.6.0
+#date            : 2025-09-23
+#version         : 1.4.0
 #usage           : sudo bash rmm_nc_linux_deploy.sh -s SERVERURL -u APIUSR -j JWT -c CUSTOMERID
 
 ## SoftwareIDs for URL
@@ -80,10 +80,10 @@ done
 
 # These are optional variables, only if you want to set static entries, just uncomment and update INSERTHERE with the value
 # make sure that MACDMGVER and MACSHVER are on the correct version if you use them
-# SERVERURL="sedemo.focusmsp.net"
-# APIUSR="api@chimpsec.com"
-# JWT="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJTb2xhcndpbmRzIE1TUCBOLWNlbnRyYWwiLCJ1c2VyaWQiOjEwNDMxMDA0MTMsImlhdCI6MTc1ODgzMTI0OH0.LKdJxMs415zEa88ASIQZxDfezI26KmvGLmRNPEopFcc"
-# CUSTOMERID="666"
+# SERVERURL=""
+# APIUSR=""
+# JWT=""
+# CUSTOMERID=""
 
 # Check your privilege
 if [ $(whoami) != "root" ]; then
