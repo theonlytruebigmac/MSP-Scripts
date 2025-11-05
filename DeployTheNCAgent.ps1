@@ -93,7 +93,10 @@ $Customers = ForEach ($Entity in $CustomerList) {
 # Uncomment this line if you wish to see the array of customers that has been found.
 #$Customers | Sort-Object -Property ID | Format-Table -AutoSize
 #$RetrievedRegistrationToken = ($Customers | Where-Object ID -eq $SpecifiedCustomerID).RegistrationToken
- 
+
+Write-Host "Check if C:\temp exists and if not create it" -forgroundcolor yellow
+if (!(Test-Path "C:\Temp")) { New-Item -ItemType Directory -Path "C:\Temp" }
+
 Write-Host "Here is the registration token for CustomerID" $SpecifiedCustomerID":" $RetrievedRegistrationToken -ForegroundColor Green
  
 # Let's see if the Windows Agent installer has already been placed in the %TEMP% directory
