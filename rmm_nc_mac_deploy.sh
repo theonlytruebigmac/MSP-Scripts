@@ -147,7 +147,7 @@ echo "Finding correct software version range for N-central $NCVERSION..."
 
 # Use awk to parse the XML and find URLs within the matching Range
 # Note: Using BSD awk compatible syntax (no GNU-specific match with capture groups)
-read -r MACDMGURL MACSHURL < <(awk -v ncver="$NCVERSION" '
+URL_OUTPUT=$(awk -v ncver="$NCVERSION" '
 # Function to extract attribute value from a line
 # Usage: get_attr(line, "Name") returns the value of Name="..."
 function get_attr(line, attr) {
@@ -217,6 +217,9 @@ END {
     }
 }
 ' /tmp/NCENTRAL/GenericFiles.xml)
+
+MACDMGURL=$(echo "$URL_OUTPUT" | awk '{print $1}')
+MACSHURL=$(echo "$URL_OUTPUT" | awk '{print $2}')
 
 # Check if URLs were found
 if [ "$MACDMGURL" == "ERROR" ] || [ "$MACSHURL" == "ERROR" ] || [ -z "$MACDMGURL" ] || [ -z "$MACSHURL" ]; then
